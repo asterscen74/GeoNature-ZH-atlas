@@ -6,6 +6,8 @@ Ces données proviennent de l'application métier [GeoNature](https://geonature.
 
 Cette suite d'outils permettant la gestion des zones humides d'un territoire a été financée par la DREAL PACA, l'Agence de l'eau, la région Sud et le CEN PACA, commandée par le Parc naturel régional du Luberon, et développée par Natural Solutions.
 
+Il est reprit par Asters - CEN Haute-Savoie
+
 ## Documentation
 
 Vous pouvez trouver le lien vers la documentation ici : https://pnx-si.github.io/GeoNature-ZH-atlas/
