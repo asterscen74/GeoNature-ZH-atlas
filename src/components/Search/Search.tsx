@@ -200,21 +200,6 @@ const Search: FC = () => {
               {values.type.map((type) => (
                 <MenuItem key={type} value={type}>
                   <Stack spacing={1} direction="row">
-                    <Box
-                      sx={{
-                        width: 20,
-                        height: 20,
-                        borderRadius: 50,
-                        backgroundColor:
-                          TYPES_COLORS[
-                            types.findIndex(
-                              (v) =>
-                                v.trim().toLowerCase() ===
-                                type.trim().toLowerCase()
-                            ) + 1
-                          ],
-                      }}
-                    />
                     <Typography>{type}</Typography>
                   </Stack>
                 </MenuItem>

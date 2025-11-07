@@ -52,12 +52,6 @@ const Item: FC<ItemProps> = ({ value }) => {
             {value.nom.toUpperCase()}
           </Typography>
           <Chip
-            avatar={
-              <Box
-                sx={styles.box}
-                style={{ backgroundColor: TYPES_COLORS[value.type_code] }}
-              />
-            }
             label={value.type}
             size="small"
           />

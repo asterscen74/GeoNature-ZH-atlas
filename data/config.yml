@@ -1,7 +1,7 @@
 dependencies:
-  apiurl: http://localhost:8000/zones_humides/
-  pdf: http://localhost:8000/zones_humides/export_pdf
-  pbf: http://localhost:8000/zones_humides/pbf/complete
+  apiurl: https://geonature.nature-haute-savoie.fr/api/zones_humides
+  pdf: https://geonature.nature-haute-savoie.fr/api/zones_humides/export_pdf
+  pbf: https://geonature.nature-haute-savoie.fr/api/zones_humides/pbf/complete
 
 map:
   layers:
@@ -10,14 +10,14 @@ map:
       name: OpenStreetMap
       attribution: '&copy OpenStreetMap'
       subdomains: []
-    - checked: true
+    - checked: false
       url: https://a.tile.opentopomap.org/{z}/{x}/{y}.png
       name: OpenTopoMap
       attribution: > 
         Map data: © <a href='https://www.openstreetmap.org/copyright' target='_blank'>OpenStreetMap contributors</a>, SRTM | Map style: © <a href='https://opentopomap.org' target='_blank'>OpenTopoMap</a> (<a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC-BY-SA</a>)
       options: {maxNativeZoom: 17}
       subdomains: []
-    - checked: false
+    - checked: true
       url: https://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}
       name: GoogleSatellite
       attribution: © GoogleMap
@@ -25,36 +25,46 @@ map:
 
 pages:
   home:
-    title: Bienvenue sur l'atlas des zones humides de Provence-Alpes-Côte d’Azur
+    title: Bienvenue sur l'atlas des zones humides de Haute-Savoie
     text:
-      - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed porta est, et fermentum ipsum. Pellentesque dictum augue sit amet neque ultricies condimentum. Etiam fringilla est aliquam lacus interdum, et commodo purus dapibus. Sed in fringilla orci, in egestas felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis sit amet aliquam dolor, sit amet tincidunt ipsum. Aliquam eget nunc dui. Nullam eget feugiat metus, et volutpat odio. Donec et libero vitae nisl pellentesque consequat. Morbi a mauris massa. Maecenas lobortis vehicula massa, a posuere libero imperdiet et. Integer vitae turpis ultrices, tincidunt neque at, aliquet augue. Nam non enim malesuada, pharetra nibh ut, maximus odio.
-      - Morbi id metus mattis, condimentum est eu, tincidunt ante. Sed placerat vestibulum velit, vel imperdiet risus tempor vitae. Donec sit amet metus eros. Maecenas diam urna, venenatis vitae purus sit amet, dapibus tristique est. In tincidunt augue eget pharetra pulvinar. Etiam consectetur ligula ac gravida aliquam. Vivamus enim massa, tincidunt at justo id, iaculis commodo purus.
+      - Plus de 50% des zones humides ont été détruites au cours du siècle précédent et continuent de régresser. Bien longtemps mal aimées, celles-ci sont pourtant des milieux naturels d'une grande richesse en termes de diversité biologique et par les nombreuses fonctions qu'elles remplissent au sein de l'écosystème. Il s'agit du troisième écosystème le plus riche biologiquement, derrière les récifs coralliens et les forêts équatoriales. Les zones humides ont par ailleurs un rôle fondamental dans la gestion qualitative et quantitative de l'eau. En bon état fonctionnel, elles rendent gratuitement de nombreux services écosystémiques comme la régulation des crues et soutien d'étiages, la filtration et épuration de l'eau, le stockage du carbone, habitats et corridors pour la faune et la flore, etc.
+      - Ce sont toutefois des milieux fragiles, sensibles au réchauffement climatique et les préserver est donc une nécessité urgente ! Pour cela, il est avant tout primordial d'améliorer la connaissance de ces milieux et à toutes les échelles. C'est pour cette raison qu'en Haute-Savoie, un inventaire départemental des zones humides a été réalisé afin de les localiser et les délimiter pour faciliter leur prise en compte dans les projets d'aménagement du territoire et documents de planification. En effet, en zone humide avérée (ou potentielle), une réglementation spécifique à celles-ci s'applique.
+      - Grâce à la contribution financière de l'Agence de l'eau Rhône Méditerranée Corse, de la Région Auvergne-Rhône-Alpes,  dule département de la Haute-Savoie et avec la collaboration du CEN Isère et du PNR du Lubéron, cet atlas cartographique simplifié et vulgarisé est désormais accessible au grand public. Il recueille l'ensemble des zones humides de Haute-Savoie connues à ce jour. La méthodologie d’actualisation mise en œuvre est suivie et validée par le groupe de pilotage "zones humides", réuni annuellement par la direction départementale des territoires (DDT).
+      - Il s'agit d'un outil d'alerte et d'aide à la décision. Bien que cet inventaire continu d'être enrichi au fil du temps et actualisé en temps réel via cet atlas, il est important de garder en tête qu'il n'est pas exhaustif et n’a pas de portée réglementaire.
     images:
-      - src: /images/zh.jpg
-        alt: zone humide 1
-      - src: /images/zh2.jpg
-        alt: zone humide 2
-      - src: /images/zh3.jpg
-        alt: zone humide 3
+      - src: /images/tourbiere_saleve.webp
+        alt: Tourbière du Salève
+      - src: /images/gouille_des_fours.webp
+        alt: Gouille des Fours
+      - src: /images/rnn_bdl.webp
+        alt: RNN Bout du Lac
+      - src: /images/eau_morte.webp
+        alt: Eau morte, RNN Bout du Lac
+      - src: /images/rnn_bdl_2.webp
+        alt: RNN Bout du Lac
+      - src: /images/chene_en_semine.webp
+        alt: Bois de la grande combe
 
 layout:
   header:
     logo:
       alt: 'logo'
-      src: /images/partenaires/logo_sit.svg
+      src: /images/partenaires/logo_asters.svg
   footer:
-    creator: SIT zones humides
+    creator: Asters - Conservatoire d'Espaces Naturels de Haute-Savoie
     legal:
-      - Financé par l’Etat, l’Agence de l’eau Rhône Méditerranée Corse, la Région Provence-Alpes-Côte d’Azur et les Parcs naturels régionaux de Camargue, du Luberon, du Queyras, du Verdon et de la Sainte Baume.
-      - Réalisé en partenariat technique avec le Parc National des Ecrins et le Conservatoire des Espaces Naturels
+      - Financé par l'Agence de l'eau Rhône Méditerranée Corse et le département de la Haute-Savoie
+      - Réalisé en partenariat technique avec le Parc National des Ecrins et le Parc Naturel Régional du Luberon.
     hero: 
     images:
-      - src: '/images/partenaires/dreal_paca.svg'
-        alt: 'DREAL PACA'
-      - src: '/images/partenaires/logo_sit.svg'
-        alt: 'SIT'
-      - src: '/images/partenaires/region_sud.svg'
-        alt: 'Region Sud'
+      - src: '/images/partenaires/logo_asters.svg'
+        alt: 'Asters - CEN Haute-Savoie'
+      - src: '/images/partenaires/logo_ddt74.svg'
+        alt: 'DDT Haute-Savoie'
+      - src: '/images/partenaires/logo_aermc.svg'
+        alt: 'Agence Eau Rhône Méditerranée Corse'
+      - src: '/images/partenaires/logo_region.svg'
+        alt: 'Région Auvergne-Rhône-Alpes'
     links:
       - title: GeoNature
         href: https://geonature.fr

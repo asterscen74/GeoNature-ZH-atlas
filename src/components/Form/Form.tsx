@@ -10,6 +10,12 @@ import axios from 'axios'
 
 const { publicRuntimeConfig } = getConfig()
 
+const styles = {
+  h6: {
+    textAlign: 'center',
+  },
+}
+
 const Form: FC = () => {
   const router = useRouter()
   const { feature } = useContext(AppContext)
@@ -45,6 +51,7 @@ const Form: FC = () => {
           <Button variant="outlined" onClick={handleOnBack} fullWidth>
             Retour
           </Button>
+          {zoneHumide.type_code != 14 &&
           <Button
             variant="outlined"
             href={`${publicRuntimeConfig?.dependencies?.pdf}/${zoneHumide.id}`}
@@ -53,11 +60,12 @@ const Form: FC = () => {
           >
             Télécharger fiche de synthèse
           </Button>
+        }
         </Stack>
         <Images images={images} />
         {zoneHumide.code && (
           <Stack spacing={2}>
-            <Typography variant="h6">
+            <Typography variant="h6" sx={styles.h6}>
               {zoneHumide.code.toUpperCase()}{' '}
               {zoneHumide.nom.toLocaleUpperCase()}
             </Typography>
@@ -86,15 +94,6 @@ const Form: FC = () => {
               label="Critère(s) de délimitation :"
               value={zoneHumide.criteres_delim.join('\n')}
             />
-            <FormItem
-              label="Fonctionnalité hydrologique / biogéochimique :"
-              value={zoneHumide.diagnostic_hydro}
-            />
-            <FormItem
-              label="Fonctionnalité biologique / écologique :"
-              value={zoneHumide.diagnostic_bio}
-            />
-            <FormItem label="Menace :" value={zoneHumide.menaces} />
           </Stack>
         )}
       </Stack>

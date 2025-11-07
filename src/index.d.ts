@@ -14,9 +14,6 @@ export interface ZoneHumide {
   bassin_versant: string[]
   superficie: number
   operateur: string
-  menaces: string
-  diagnostic_bio: string
-  diagnostic_hydro: string
   criteres_delim: string[]
   images: Image[]
   communes: string[]
